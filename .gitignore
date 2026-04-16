@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+build/
+
+# React / Vite
+.vite/
+
+# Java / Spring Boot
+target/
+*.jar
+*.class
+
+# Logs
+*.log
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.pid
