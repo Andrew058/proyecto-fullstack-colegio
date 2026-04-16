@@ -57,7 +57,11 @@ DB_USER=admin
 DB_PASSWORD=admin123
 DB_DRIVER=com.mysql.cj.jdbc.Driver
 
+# Linux / Mac
+docker exec -i mysql_db mysql -u root -proot colegio_db < backend/db/backup.sql
 
+# Windows (PowerShell)
+Get-Content backend/db/backup.sql | docker exec -i mysql_db mysql -u root -proot colegio_db
 
 # Ejecución con Docker (IMPORTANTE)
 
@@ -133,6 +137,11 @@ Notas relacionadas
 
 Esto permite probar inmediatamente la aplicación.
 
+# Probar API 
+
+GET http://localhost:8080/alumnos
+GET http://localhost:8080/materias
+GET http://localhost:8080/notas/alumno/1
 
 # Consideraciones importantes
 
@@ -154,6 +163,12 @@ Despliegue con Docker funcionando
 ## Nota sobre el backup
 
 El archivo se proporciona en formato .sql compatible con MySQL.
+
+# Arquitectura
+
+Frontend (React) → Backend (Spring Boot API REST) → Base de datos (MySQL)
+
+Comunicación mediante HTTP (JSON)
 
 
 # Autor
