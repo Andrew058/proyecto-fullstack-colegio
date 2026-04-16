@@ -101,8 +101,8 @@ DELETE /materias/{id}
 
 #Notas
 
-* POST /notas
-* GET /notas/alumno/{id}
+POST /notas
+GET /notas/alumno/{id}
 
 
 
