@@ -47,20 +47,15 @@ PROYECTODESARROLLO/
             Dockerfile
 
 docker-compose.yml
-```
-
----
 
 # Variables de entorno
 
 El backend utiliza las siguientes variables:
 
-```
 DB_URI=jdbc:mysql://mysql:3306/colegio_db
 DB_USER=admin
 DB_PASSWORD=admin123
 DB_DRIVER=com.mysql.cj.jdbc.Driver
-```
 
 
 
@@ -75,7 +70,7 @@ cd PROYECTODESARROLLO
 
 # 2. Levantar todo el sistema
 
-
+Con un solo comando se levanta todo el sistema (backend, frontend y base de datos):
 docker-compose up --build
 
 
@@ -154,6 +149,11 @@ Registro de notas
 Listado de notas por alumno
 Integración frontend-backend
 Despliegue con Docker funcionando
+
+
+## Nota sobre el backup
+
+El archivo se proporciona en formato .sql compatible con MySQL.
 
 
 # Autor

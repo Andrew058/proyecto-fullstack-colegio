@@ -9,11 +9,11 @@ import java.util.List;
 
 public interface NotaRepository extends JpaRepository<Nota, Long> {
 
-    // 🔹 ESTE ES EL IMPORTANTE (usa este en el controller)
+    // ESTE ES EL IMPORTANTE (usa este en el controller)
     @Query("SELECT n FROM Nota n JOIN FETCH n.materia WHERE n.alumno.id = :id")
     List<Nota> findNotasConMateria(@Param("id") Long id);
 
-    // 🔹 LOS DEMÁS LOS DEJAS IGUAL
+    // LOS DEMÁS LOS DEJAS IGUAL
     List<Nota> findByAlumnoId(Long alumnoId);
 
     boolean existsByMateriaId(Long materiaId);

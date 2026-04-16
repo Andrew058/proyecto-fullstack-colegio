@@ -6,12 +6,12 @@ function App() {
     <div style={{ padding: "20px" }}>
       <h1>Sistema Colegio</h1>
 
-      {/* 🔹 MATERIAS */}
+      {/* MATERIAS */}
       <Materias />
 
       <hr />
 
-      {/* 🔹 ALUMNOS */}
+      {/* ALUMNOS */}
       <Alumnos />
     </div>
   );

@@ -17,26 +17,26 @@ public class MateriaController {
         this.repo = repo;
     }
 
-    // 🔹 LISTAR
+    // LISTAR
     @GetMapping
     public List<Materia> listar() {
         return repo.findAll();
     }
 
-    // 🔹 OBTENER POR ID
+    // OBTENER POR ID
     @GetMapping("/{id}")
     public Materia obtener(@PathVariable Long id) {
         return repo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
     }
 
-    // 🔹 CREAR
+    // CREAR
     @PostMapping
     public Materia crear(@RequestBody Materia materia) {
         return repo.save(materia);
     }
 
-    // 🔹 ACTUALIZAR
+    // ACTUALIZAR
     @PutMapping("/{id}")
     public Materia actualizar(@PathVariable Long id, @RequestBody Materia materia) {
         materia.setId(id);
